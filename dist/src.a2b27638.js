@@ -176,109 +176,167 @@ module.hot.accept(reloadCSS);
 "use strict";
 
 require("./styles.css");
-var activeType = "platinum";
-var marketingTools = [{
-  subtitle: "Marketing tools"
-}, {
-  head: "Data in the Find-a-ProAdvisor directory",
-  silver: "yes",
-  gold: "yes",
-  platinum: "yes",
-  elite: "yes"
-}, {
-  head: "Digital ProAdvisor badges",
-  silver: "no",
-  gold: "yes",
-  platinum: "yes",
-  elite: "yes"
-}, {
-  head: "QuickBooks ProAdvisor Marketing Fund",
-  silver: "no",
-  gold: "yes",
-  platinum: "yes",
-  elite: "yes",
-  url: "https://quickbooks.intuit.com/ca/accountants/marketing-fund/"
-}, {
-  head: "Mailchimp | Marketing Automation & Email (BETA)",
-  silver: "no",
-  gold: "15%",
-  platinum: "15%",
-  elite: "15%"
-}, {
-  head: "ProAdvisor Program marketing toolkit",
-  silver: "no",
-  gold: "yes",
-  platinum: "yes",
-  elite: "yes"
-}];
-var productSupport = [{
-  subtitle: "Product support"
-}, {
-  head: "Free QuickBooks Online Accountant support",
-  silver: "yes",
-  gold: "yes",
-  platinum: "yes",
-  elite: "yes"
-}, {
-  head: "Specialist to help you move your data into QuickBooks Online",
-  sup: "4",
-  silver: "no",
-  gold: "yes",
-  platinum: "yes",
-  elite: "yes"
-}, {
-  head: "Priority support for QuickBooks Online Accountant",
-  silver: "no",
-  gold: "no",
-  platinum: "yes",
-  elite: "yes"
-}, {
-  head: "Book a call with a QuickBooks product specialist",
-  sup: "5",
-  silver: "no",
-  gold: "no",
-  platinum: "yes",
-  elite: "yes"
-}, {
-  head: "Dedicated Account Manager",
-  silver: "no",
-  gold: "no",
-  platinum: "yes",
-  elite: "yes"
-}];
-var enhanceYourKnowledge = [{
-  subtitle: "Enhance your knowledge"
-}, {
-  head: "Getting started with QuickBooks Online Accountant webinar",
-  silver: "yes",
-  gold: "yes",
-  platinum: "yes",
-  elite: "yes"
-}, {
-  head: "Training and certification",
-  silver: "yes",
-  gold: "yes",
-  platinum: "yes",
-  elite: "yes"
-}, {
-  head: "PEvents and Webinars",
-  silver: "yes",
-  gold: "yes",
-  platinum: "yes",
-  elite: "yes"
-}, {
-  head: "Professional QuickBooks Online client training material",
-  silver: "no",
-  gold: "no",
-  platinum: "yes",
-  elite: "yes"
-}, {
-  head: "Free access to exclusive content resources",
-  silver: "no",
-  gold: "no",
-  platinum: "yes",
-  elite: "yes"
-}];
+var tableData = {
+  activeType: "elite",
+  headingData: {
+    silver: {
+      id: "silver",
+      name: "Silver",
+      points: "1‑199"
+    },
+    gold: {
+      id: "gold",
+      name: "Gold",
+      points: "200‑799"
+    },
+    platinum: {
+      id: "platinum",
+      name: "Platinum",
+      points: "800-1,599"
+    },
+    elite: {
+      id: "elite",
+      name: "Elite",
+      points: "1,600+"
+    }
+  },
+  marketingTools: [{
+    subtitle: "Marketing tools"
+  }, {
+    head: "Data in the Find-a-ProAdvisor directory",
+    silver: "yes",
+    gold: "yes",
+    platinum: "yes",
+    elite: "yes"
+  }, {
+    head: "Digital ProAdvisor badges",
+    silver: "no",
+    gold: "yes",
+    platinum: "yes",
+    elite: "yes"
+  }, {
+    head: "QuickBooks ProAdvisor Marketing Fund",
+    silver: "no",
+    gold: "yes",
+    platinum: "yes",
+    elite: "yes",
+    url: "https://quickbooks.intuit.com/ca/accountants/marketing-fund/"
+  }, {
+    head: "Mailchimp | Marketing Automation & Email (BETA)",
+    silver: "no",
+    gold: "15%",
+    platinum: "15%",
+    elite: "15%"
+  }, {
+    head: "ProAdvisor Program marketing toolkit",
+    silver: "no",
+    gold: "yes",
+    platinum: "yes",
+    elite: "yes"
+  }],
+  productSupport: [{
+    subtitle: "Product support"
+  }, {
+    head: "Free QuickBooks Online Accountant support",
+    silver: "yes",
+    gold: "yes",
+    platinum: "yes",
+    elite: "yes"
+  }, {
+    head: "Specialist to help you move your data into QuickBooks Online",
+    sup: "4",
+    silver: "no",
+    gold: "yes",
+    platinum: "yes",
+    elite: "yes"
+  }, {
+    head: "Priority support for QuickBooks Online Accountant",
+    silver: "no",
+    gold: "no",
+    platinum: "yes",
+    elite: "yes"
+  }, {
+    head: "Book a call with a QuickBooks product specialist",
+    sup: "5",
+    silver: "no",
+    gold: "no",
+    platinum: "yes",
+    elite: "yes"
+  }, {
+    head: "Dedicated Account Manager",
+    silver: "no",
+    gold: "no",
+    platinum: "yes",
+    elite: "yes"
+  }],
+  enhanceYourKnowledge: [{
+    subtitle: "Enhance your knowledge"
+  }, {
+    head: "Getting started with QuickBooks Online Accountant webinar",
+    silver: "yes",
+    gold: "yes",
+    platinum: "yes",
+    elite: "yes"
+  }, {
+    head: "Training and certification",
+    silver: "yes",
+    gold: "yes",
+    platinum: "yes",
+    elite: "yes"
+  }, {
+    head: "Events and Webinars",
+    silver: "yes",
+    gold: "yes",
+    platinum: "yes",
+    elite: "yes"
+  }, {
+    head: "Professional QuickBooks Online client training material",
+    silver: "no",
+    gold: "no",
+    platinum: "yes",
+    elite: "yes"
+  }, {
+    head: "Free access to exclusive content resources",
+    silver: "no",
+    gold: "no",
+    platinum: "yes",
+    elite: "yes"
+  }],
+  softwareAndServices: [{
+    subtitle: "Software and services"
+  }, {
+    head: "QuickBooks Online for your firm",
+    silver: "yes",
+    gold: "yes",
+    platinum: "yes",
+    elite: "yes"
+  }, {
+    head: "Payroll for your firm",
+    silver: "yes",
+    gold: "yes",
+    platinum: "yes",
+    elite: "yes"
+  }, {
+    head: "Quickbooks Time tracking for your firm",
+    silver: "yes",
+    gold: "yes",
+    platinum: "yes",
+    elite: "yes"
+  }, {
+    head: "Discounts on QuickBooks subscriptions for your clients",
+    sup: "7",
+    silver: "yes",
+    gold: "yes",
+    platinum: "yes",
+    elite: "yes"
+  }, {
+    head: "Discounts on DocuSign eSignature, plus special client offer",
+    silver: "20%",
+    gold: "25%",
+    platinum: "30%",
+    elite: "40%"
+  }]
+};
 function showIcon(data) {
   if (data === "yes") {
     return "<span class=\"checkmark\"></span>";
@@ -290,13 +348,18 @@ function showIcon(data) {
 }
 function tableContent(data) {
   if (data.subtitle) {
-    return "<div class=\"tr thead\">\n  <div class=\"th head\">".concat(data.subtitle, "</div>\n              <div class=\"td ").concat(activeType === "silver" && "active", "\"></div>\n              <div class=\"td ").concat(activeType === "gold" && "active", "\"></div>\n              <div class=\"td ").concat(activeType === "platinum" && "active", "\"></div>\n              <div class=\"td ").concat(activeType === "elite" && "active", "\"></div>\n            </div>");
+    return "<div class=\"tr thead\">\n  <div class=\"th head\">".concat(data.subtitle, "</div>\n              <div class=\"td ").concat(tableData.activeType === "silver" && "active", "\"></div>\n              <div class=\"td ").concat(tableData.activeType === "gold" && "active", "\"></div>\n              <div class=\"td ").concat(tableData.activeType === "platinum" && "active", "\"></div>\n              <div class=\"td ").concat(tableData.activeType === "elite" && "active", "\"></div>\n            </div>");
   }
-  return "<div class=\"tr\">\n            ".concat(data.url ? "<div class=\"th\"><a href=\"".concat(data.url, "\" target=\"_blank\">").concat(data.head, "</div></a>") : "<div class=\"th\">".concat(data.head, "</div>"), "\n            <div class=\"td ").concat(activeType === "silver" && "active", "\">").concat(showIcon(data.silver), "</div>\n            <div class=\"td ").concat(activeType === "gold" && "active", "\">").concat(showIcon(data.gold), "</div>\n            <div class=\"td ").concat(activeType === "platinum" && "active", "\">").concat(showIcon(data.platinum), "</div>\n            <div class=\"td ").concat(activeType === "elite" && "active", "\">").concat(showIcon(data.elite), "</div>\n          </div>");
+  return "<div class=\"tr\">\n            ".concat(data.url ? "<div class=\"th\"><a href=\"".concat(data.url, "\" target=\"_blank\">").concat(data.head, "</div></a>") : "<div class=\"th\">".concat(data.head, "</div>"), "\n            <div class=\"td ").concat(tableData.activeType === "silver" && "active", "\">").concat(showIcon(data.silver), "</div>\n            <div class=\"td ").concat(tableData.activeType === "gold" && "active", "\">").concat(showIcon(data.gold), "</div>\n            <div class=\"td ").concat(tableData.activeType === "platinum" && "active", "\">").concat(showIcon(data.platinum), "</div>\n            <div class=\"td ").concat(tableData.activeType === "elite" && "active", "\">").concat(showIcon(data.elite), "</div>\n          </div>");
 }
-document.getElementById("marketingTools").innerHTML = "".concat(marketingTools.map(tableContent).join(""));
-document.getElementById("productSupport").innerHTML = "".concat(productSupport.map(tableContent).join(""));
-document.getElementById("enhanceYourKnowledge").innerHTML = "".concat(enhanceYourKnowledge.map(tableContent).join(""));
+function headingContent(data) {
+  return "\n  <div class=\"tr\">\n    <div class=\"th\">Points</div>\n    <div class=\"td ".concat(tableData.activeType === "silver" && "active", "\">\n      <div class=\"package-type silver\">").concat(data.silver.name, "</div>\n      <div class=\"points\">").concat(data.silver.points, "</div>\n    </div>\n    <div class=\"td ").concat(tableData.activeType === "gold" && "active", "\">\n      <div class=\"package-type gold\">").concat(data.gold.name, "</div>\n      <div class=\"points\">").concat(data.gold.points, "</div>\n    </div>\n    <div class=\"td ").concat(tableData.activeType === "platinum" && "active", "\">\n      <div class=\"package-type platinum\">").concat(data.platinum.name, "</div>\n      <div class=\"points\">").concat(data.platinum.points, "</div>\n    </div>\n    <div class=\"td ").concat(tableData.activeType === "elite" && "active", "\">\n      <div class=\"package-type elite\">").concat(data.elite.name, "</div>\n      <div class=\"points\">").concat(data.elite.points, "</div>\n    </div>\n    </div>\n  ");
+}
+document.getElementById("tableHeading").innerHTML = "".concat(headingContent(tableData.headingData));
+document.getElementById("marketingTools").innerHTML = "".concat(tableData.marketingTools.map(tableContent).join(""));
+document.getElementById("productSupport").innerHTML = "".concat(tableData.productSupport.map(tableContent).join(""));
+document.getElementById("enhanceYourKnowledge").innerHTML = "".concat(tableData.enhanceYourKnowledge.map(tableContent).join(""));
+document.getElementById("softwareAndServices").innerHTML = "".concat(tableData.softwareAndServices.map(tableContent).join(""));
 },{"./styles.css":"src/styles.css"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
