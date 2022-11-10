@@ -4,13 +4,6 @@
   --platinum: #008481;
   --elite: #2ca01c;
 }
-
-body {
-  font-family: "Avenir Next forINTUIT", sans-serif;
-}
-.block {
-}
-
 .table {
   text-align: left;
   display: table;
@@ -22,9 +15,9 @@ body {
   /* display: table-header-group; */
   border-bottom: 1px solid #000000;
 }
-.tbody {
+/* .tbody {
   display: table-row-group;
-}
+} */
 .tr {
   display: table-row;
 }
