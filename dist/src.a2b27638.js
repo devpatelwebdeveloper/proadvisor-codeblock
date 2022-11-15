@@ -124,12 +124,12 @@ var tableData = {
     silver: {
       id: "silver",
       name: "Silver",
-      points: "1‑199"
+      points: "1-199"
     },
     gold: {
       id: "gold",
       name: "Gold",
-      points: "200‑799"
+      points: "200-799"
     },
     platinum: {
       id: "platinum",
@@ -290,12 +290,12 @@ function showIcon(data) {
 }
 function tableContent(data) {
   if (data.subtitle) {
-    return "<div class=\"tr thead\">\n  <div class=\"th head\">".concat(data.subtitle, "</div>\n              <div class=\"td ").concat(tableData.activeType === "silver" && "active", "\"></div>\n              <div class=\"td ").concat(tableData.activeType === "gold" && "active", "\"></div>\n              <div class=\"td ").concat(tableData.activeType === "platinum" && "active", "\"></div>\n              <div class=\"td ").concat(tableData.activeType === "elite" && "active", "\"></div>\n            </div>");
+    return "<div class=\"tr thead\">\n  <div class=\"th head\">".concat(data.subtitle, "</div>\n              <div class=\"td silver-content ").concat(tableData.activeType === "silver" && "active", "\"></div>\n              <div class=\"td gold-content ").concat(tableData.activeType === "gold" && "active", "\"></div>\n              <div class=\"td platinum-content ").concat(tableData.activeType === "platinum" && "active", "\"></div>\n              <div class=\"td elite-content ").concat(tableData.activeType === "elite" && "active", "\"></div>\n            </div>");
   }
-  return "<div class=\"tr\">\n            ".concat(data.url ? "<div class=\"th\"><a href=\"".concat(data.url, "\" target=\"_blank\">").concat(data.head, "</div></a>") : "<div class=\"th\">".concat(data.head, "</div>"), "\n            <div class=\"td ").concat(tableData.activeType === "silver" && "active", "\">").concat(showIcon(data.silver), "</div>\n            <div class=\"td ").concat(tableData.activeType === "gold" && "active", "\">").concat(showIcon(data.gold), "</div>\n            <div class=\"td ").concat(tableData.activeType === "platinum" && "active", "\">").concat(showIcon(data.platinum), "</div>\n            <div class=\"td ").concat(tableData.activeType === "elite" && "active", "\">").concat(showIcon(data.elite), "</div>\n          </div>");
+  return "<div class=\"tr\">\n            ".concat(data.url ? "<div class=\"th\"><a href=\"".concat(data.url, "\" target=\"_blank\">").concat(data.head, "</div></a>") : "<div class=\"th\">".concat(data.head, "</div>"), "\n            <div class=\"td silver-content ").concat(tableData.activeType === "silver" && "active", "\">").concat(showIcon(data.silver), "</div>\n            <div class=\"td gold-content ").concat(tableData.activeType === "gold" && "active", "\">").concat(showIcon(data.gold), "</div>\n            <div class=\"td platinum-content ").concat(tableData.activeType === "platinum" && "active", "\">").concat(showIcon(data.platinum), "</div>\n            <div class=\"td elite-content ").concat(tableData.activeType === "elite" && "active", "\">").concat(showIcon(data.elite), "</div>\n          </div>");
 }
 function headingContent(data) {
-  return "\n  <div class=\"tr\">\n    <div class=\"th\">Points</div>\n    <div class=\"td ".concat(tableData.activeType === "silver" && "active", "\">\n      <div class=\"package-type silver\">").concat(data.silver.name, "</div>\n      <div class=\"points\">").concat(data.silver.points, "</div>\n    </div>\n    <div class=\"td ").concat(tableData.activeType === "gold" && "active", "\">\n      <div class=\"package-type gold\">").concat(data.gold.name, "</div>\n      <div class=\"points\">").concat(data.gold.points, "</div>\n    </div>\n    <div class=\"td ").concat(tableData.activeType === "platinum" && "active", "\">\n      <div class=\"package-type platinum\">").concat(data.platinum.name, "</div>\n      <div class=\"points\">").concat(data.platinum.points, "</div>\n    </div>\n    <div class=\"td ").concat(tableData.activeType === "elite" && "active", "\">\n      <div class=\"package-type elite\">").concat(data.elite.name, "</div>\n      <div class=\"points\">").concat(data.elite.points, "</div>\n    </div>\n    </div>\n  ");
+  return "\n  <div class=\"tr\">\n    <div class=\"th\">Points</div>\n    <div class=\"td ".concat(tableData.activeType === "silver" && "active", "\">\n      <div class=\"package-type silver-heading\">").concat(data.silver.name, "</div>\n      <div class=\"points\">").concat(data.silver.points, "</div>\n    </div>\n    <div class=\"td ").concat(tableData.activeType === "gold" && "active", "\">\n      <div class=\"package-type gold-heading\">").concat(data.gold.name, "</div>\n      <div class=\"points\">").concat(data.gold.points, "</div>\n    </div>\n    <div class=\"td ").concat(tableData.activeType === "platinum" && "active", "\">\n      <div class=\"package-type platinum-heading\">").concat(data.platinum.name, "</div>\n      <div class=\"points\">").concat(data.platinum.points, "</div>\n    </div>\n    <div class=\"td ").concat(tableData.activeType === "elite" && "active", "\">\n      <div class=\"package-type elite-heading\">").concat(data.elite.name, "</div>\n      <div class=\"points\">").concat(data.elite.points, "</div>\n    </div>\n    </div>\n  ");
 }
 document.getElementById("tableHeading").innerHTML = "".concat(headingContent(tableData.headingData));
 document.getElementById("marketingTools").innerHTML = "".concat(tableData.marketingTools.map(tableContent).join(""));
@@ -327,7 +327,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "45475" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "36601" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
