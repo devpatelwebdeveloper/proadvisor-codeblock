@@ -24,9 +24,11 @@
 .th {
   width: 40%;
 }
-/* .head{
-  width:100%;
-} */
+.head {
+  font-weight: 400 !important;
+  font-size: 19px !important;
+  line-height: 40px !important;
+}
 .td {
   width: 15%;
   align-items: center;
@@ -43,9 +45,13 @@
   padding-bottom: 10px;
   display: table-cell;
   vertical-align: bottom;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
 }
 .active {
   background: #f8f8fa;
+  font-weight: 700;
 }
 
 .checkmark {
@@ -82,16 +88,28 @@
   margin-bottom: 5px;
   display: inline-block;
 }
-.silver {
+.silver-content {
+  color: var(--silver);
+}
+.gold-content {
+  color: var(--gold);
+}
+.platinum-content {
+  color: var(--platinum);
+}
+.elite-content {
+  color: var(--elite);
+}
+.silver-heading {
   border-bottom-color: var(--silver);
 }
-.gold {
+.gold-heading {
   border-bottom-color: var(--gold);
 }
-.platinum {
+.platinum-heading {
   border-bottom-color: var(--platinum);
 }
-.elite {
+.elite-heading {
   border-bottom-color: var(--elite);
 }
 
@@ -106,4 +124,9 @@
 }
 .elite-checkmark {
   fill: var(--elite);
+}
+
+.th a {
+  color: #0077c5;
+  text-decoration: none;
 }

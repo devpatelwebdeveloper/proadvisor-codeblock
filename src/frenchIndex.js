@@ -3,45 +3,45 @@ const tableData = {
   headingData: {
     silver: {
       id: "silver",
-      name: "Silver",
+      name: "Argent",
       points: "1-199",
     },
     gold: {
       id: "gold",
-      name: "Gold",
+      name: "Or",
       points: "200-799",
     },
     platinum: {
       id: "platinum",
-      name: "Platinum",
+      name: "Platine",
       points: "800-1,599",
     },
     elite: {
       id: "elite",
-      name: "Elite",
+      name: "Élite",
       points: "1,600+",
     },
   },
   marketingTools: [
     {
-      subtitle: "Marketing tools",
+      subtitle: "Outils de marketing",
     },
     {
-      head: "Data in the Find-a-ProAdvisor directory",
+      head: " Membre du répertoire Trouver un ConseillerPro",
       silver: "yes",
       gold: "yes",
       platinum: "yes",
       elite: "yes",
     },
     {
-      head: "Digital ProAdvisor badges",
+      head: "Médaillons ConseillerPro numériques",
       silver: "no",
       gold: "yes",
       platinum: "yes",
       elite: "yes",
     },
     {
-      head: "QuickBooks ProAdvisor Marketing Fund",
+      head: "Fonds de marketing ConseillersPro de QuickBooks",
       silver: "no",
       gold: "yes",
       platinum: "yes",
@@ -49,14 +49,14 @@ const tableData = {
       url: "https://quickbooks.intuit.com/ca/accountants/marketing-fund/",
     },
     {
-      head: "Mailchimp | Marketing Automation & Email (BETA)",
+      head: "Rabais sur Mailchimp | Marketing, automatisation et courriels (BÊTA)",
       silver: "no",
       gold: "15%",
       platinum: "15%",
       elite: "15%",
     },
     {
-      head: "ProAdvisor Program marketing toolkit",
+      head: "Trousse d’outils marketing du programme ConseillerPro",
       silver: "no",
       gold: "yes",
       platinum: "yes",
@@ -65,17 +65,17 @@ const tableData = {
   ],
   productSupport: [
     {
-      subtitle: "Product support",
+      subtitle: "Soutien technique",
     },
     {
-      head: "Free QuickBooks Online Accountant support",
+      head: " Soutien gratuit pour QuickBooks en ligne Comptable",
       silver: "yes",
       gold: "yes",
       platinum: "yes",
       elite: "yes",
     },
     {
-      head: "Specialist to help you move your data into QuickBooks Online",
+      head: "Aide d’un spécialiste pour saisir vos données dans QuickBooks en ligne",
       sup: "4",
       silver: "no",
       gold: "yes",
@@ -83,14 +83,14 @@ const tableData = {
       elite: "yes",
     },
     {
-      head: "Priority support for QuickBooks Online Accountant",
+      head: "Soutien prioritaire concernant QuickBooks en ligne Comptable",
       silver: "no",
       gold: "no",
       platinum: "yes",
       elite: "yes",
     },
     {
-      head: "Book a call with a QuickBooks product specialist",
+      head: "Prenez rendez-vous avec un spécialiste de QuickBooks",
       sup: "5",
       silver: "no",
       gold: "no",
@@ -98,7 +98,7 @@ const tableData = {
       elite: "yes",
     },
     {
-      head: "Dedicated Account Manager",
+      head: "Gestionnaire de compte dédié",
       silver: "no",
       gold: "no",
       platinum: "yes",
@@ -107,38 +107,38 @@ const tableData = {
   ],
   enhanceYourKnowledge: [
     {
-      subtitle: "Enhance your knowledge",
+      subtitle: "Améliorez vos connaissances",
     },
     {
-      head: "Getting started with QuickBooks Online Accountant webinar",
+      head: "Webinaire Mise en route de QuickBooks en ligne Comptable",
       silver: "yes",
       gold: "yes",
       platinum: "yes",
       elite: "yes",
     },
     {
-      head: "Training and certification",
+      head: "Formation et certification",
       silver: "yes",
       gold: "yes",
       platinum: "yes",
       elite: "yes",
     },
     {
-      head: "Events and Webinars",
+      head: "Événements et webinaires",
       silver: "yes",
       gold: "yes",
       platinum: "yes",
       elite: "yes",
     },
     {
-      head: "Professional QuickBooks Online client training material",
+      head: "Documents de formation sur QuickBooks en ligne pour les clients professionnels",
       silver: "no",
       gold: "no",
       platinum: "yes",
       elite: "yes",
     },
     {
-      head: "Free access to exclusive content resources",
+      head: "Accès gratuit à des ressources au contenu exclusif",
       silver: "no",
       gold: "no",
       platinum: "yes",
@@ -147,31 +147,31 @@ const tableData = {
   ],
   softwareAndServices: [
     {
-      subtitle: "Software and services",
+      subtitle: "Logiciels et services",
     },
     {
-      head: "QuickBooks Online for your firm",
+      head: "QuickBooks en ligne pour votre cabinet",
       silver: "yes",
       gold: "yes",
       platinum: "yes",
       elite: "yes",
     },
     {
-      head: "Payroll for your firm",
+      head: "Paie pour votre cabinet",
       silver: "yes",
       gold: "yes",
       platinum: "yes",
       elite: "yes",
     },
     {
-      head: "Quickbooks Time tracking for your firm",
+      head: "Suivi des heures travaillées par QuickBooks Time pour votre cabinet",
       silver: "yes",
       gold: "yes",
       platinum: "yes",
       elite: "yes",
     },
     {
-      head: "Discounts on QuickBooks subscriptions for your clients",
+      head: "Rabais sur l’abonnement à QuickBooks pour vos clients",
       sup: "7",
       silver: "yes",
       gold: "yes",
@@ -179,7 +179,7 @@ const tableData = {
       elite: "yes",
     },
     {
-      head: "Discounts on DocuSign eSignature, plus special client offer",
+      head: "Réductions sur DocuSign eSignature en plus d’une offre spéciale pour les clients QuickBooks Online for your firm",
       silver: "20%",
       gold: "25%",
       platinum: "30%",
